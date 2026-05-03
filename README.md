@@ -1,8 +1,7 @@
 
 # 🎭 Générateur de Mèmes
 
-**TP3 — Applications Web (420-211)**  
-Cégep Marie-Victorin · Session Hiver 2025
+
 
 ---
 
