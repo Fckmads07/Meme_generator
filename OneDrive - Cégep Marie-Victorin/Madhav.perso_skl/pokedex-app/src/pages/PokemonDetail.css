@@ -1,0 +1,298 @@
+.detail-page {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 2rem 4rem;
+}
+
+.back-btn {
+  background: none;
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.6);
+  padding: 0.5rem 1.2rem;
+  border-radius: 8px;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+  margin-bottom: 2rem;
+}
+
+.back-btn:hover {
+  border-color: #ffdc00;
+  color: #ffdc00;
+}
+
+.detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 3rem;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 3rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.detail-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    ellipse at 30% 50%,
+    color-mix(in srgb, var(--type-color) 12%, transparent),
+    transparent 60%
+  );
+  pointer-events: none;
+}
+
+.detail-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.detail-glow {
+  position: absolute;
+  inset: 10%;
+  background: radial-gradient(
+    circle,
+    color-mix(in srgb, var(--type-color) 20%, transparent),
+    transparent 70%
+  );
+  border-radius: 50%;
+  filter: blur(20px);
+}
+
+.detail-image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 280px;
+  filter: drop-shadow(0 20px 50px rgba(0, 0, 0, 0.5));
+  animation: float 4s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.detail-info {
+  position: relative;
+  z-index: 1;
+}
+
+.detail-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.detail-number {
+  font-family: "Press Start 2P", monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.detail-favorite-btn {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.15);
+  border-radius: 999px;
+  color: rgba(255, 255, 255, 0.7);
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.detail-favorite-btn:hover,
+.detail-favorite-btn.favorited {
+  border-color: #e53935;
+  color: #ef9a9a;
+  background: rgba(229, 57, 53, 0.1);
+}
+
+.detail-name {
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(1.2rem, 3vw, 1.8rem);
+  color: #fff;
+  margin: 0 0 1rem;
+  line-height: 1.4;
+}
+
+.detail-types {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-bottom: 1.5rem;
+}
+
+.detail-type-badge {
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  font-size: 0.8rem;
+  padding: 4px 14px;
+  border-radius: 999px;
+  color: #fff;
+  text-transform: capitalize;
+  letter-spacing: 0.5px;
+}
+
+.detail-measurements {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.measurement {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
+  text-align: center;
+}
+
+.measurement-label {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.measurement-value {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 1.1rem;
+  color: #fff;
+}
+
+.measurement-divider {
+  width: 1px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.detail-section {
+  margin-bottom: 1.5rem;
+}
+
+.section-title {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: rgba(255, 220, 0, 0.7);
+  margin: 0 0 0.75rem;
+}
+
+.abilities {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.ability-tag {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.85rem;
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 4px 12px;
+  border-radius: 8px;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: capitalize;
+}
+
+.ability-tag em {
+  font-style: italic;
+  color: rgba(255, 220, 0, 0.6);
+  font-size: 0.75rem;
+}
+
+.stats-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.stat-row {
+  display: grid;
+  grid-template-columns: 80px 36px 1fr;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.stat-name {
+  font-family: "Nunito", sans-serif;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.55);
+  text-align: right;
+}
+
+.stat-value {
+  font-family: "Nunito", sans-serif;
+  font-weight: 800;
+  font-size: 0.9rem;
+  color: #fff;
+  text-align: right;
+}
+
+.stat-bar-bg {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.stat-bar-fill {
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    var(--type-color),
+    color-mix(in srgb, var(--type-color) 70%, #fff)
+  );
+  border-radius: 999px;
+  transition: width 0.6s ease;
+}
+
+/* Loading / Error */
+.detail-loading,
+.detail-error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 1.5rem;
+  font-family: "Nunito", sans-serif;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.pokeball-spinner {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 4px solid rgba(255, 220, 0, 0.2);
+  border-top-color: #ffdc00;
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin { to { transform: rotate(360deg); } }
+
+@media (max-width: 700px) {
+  .detail-card {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.5rem;
+  }
+  .detail-image { max-width: 200px; }
+}

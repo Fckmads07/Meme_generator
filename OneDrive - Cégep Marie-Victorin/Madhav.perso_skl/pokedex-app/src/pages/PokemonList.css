@@ -1,0 +1,173 @@
+.list-page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem 4rem;
+}
+
+.list-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.list-title {
+  font-family: "Press Start 2P", monospace;
+  font-size: clamp(1.4rem, 4vw, 2rem);
+  margin: 0 0 0.5rem;
+}
+
+.title-accent {
+  color: #ffdc00;
+  text-shadow: 0 0 20px rgba(255, 220, 0, 0.35);
+}
+
+.list-subtitle {
+  font-family: "Nunito", sans-serif;
+  color: rgba(255, 255, 255, 0.45);
+  margin: 0 0 2rem;
+}
+
+/* Recherche */
+.search-wrapper {
+  position: relative;
+  max-width: 480px;
+  margin: 0 auto;
+}
+
+.search-icon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+  pointer-events: none;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.9rem 3rem 0.9rem 2.8rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1.5px solid rgba(255, 255, 255, 0.12);
+  border-radius: 12px;
+  color: #fff;
+  font-family: "Nunito", sans-serif;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
+}
+
+.search-input::placeholder {
+  color: rgba(255, 255, 255, 0.35);
+}
+
+.search-input:focus {
+  border-color: rgba(255, 220, 0, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 220, 0, 0.1);
+}
+
+.search-clear {
+  position: absolute;
+  right: 0.8rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  font-size: 0.85rem;
+  padding: 4px;
+  transition: color 0.2s;
+}
+
+.search-clear:hover {
+  color: #fff;
+}
+
+/* Grille de cartes */
+.pokemon-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+/* Skeleton loading */
+.loading-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1.25rem;
+}
+
+.skeleton-card {
+  height: 260px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.04);
+  animation: shimmer 1.4s infinite linear;
+  background-image: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.03) 0%,
+    rgba(255, 255, 255, 0.07) 50%,
+    rgba(255, 255, 255, 0.03) 100%
+  );
+  background-size: 200% 100%;
+}
+
+@keyframes shimmer {
+  from { background-position: 200% 0; }
+  to { background-position: -200% 0; }
+}
+
+/* Erreur */
+.error-message {
+  text-align: center;
+  padding: 4rem;
+  color: #ef9a9a;
+  font-family: "Nunito", sans-serif;
+}
+
+.error-message span { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+/* Aucun résultat */
+.empty-state {
+  text-align: center;
+  padding: 4rem;
+  color: rgba(255, 255, 255, 0.4);
+  font-family: "Nunito", sans-serif;
+}
+
+.empty-state span { font-size: 3rem; display: block; margin-bottom: 1rem; }
+
+/* Pagination (bonus) */
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.page-btn {
+  padding: 0.7rem 1.5rem;
+  background: rgba(255, 220, 0, 0.1);
+  border: 1.5px solid rgba(255, 220, 0, 0.3);
+  border-radius: 10px;
+  color: #ffdc00;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.page-btn:hover:not(:disabled) {
+  background: rgba(255, 220, 0, 0.2);
+}
+
+.page-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-family: "Nunito", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 0.9rem;
+}
